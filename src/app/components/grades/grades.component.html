@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="sidebar">
+      <button (click)="navigateTo('info')">Student Info</button>
+      <button (click)="navigateTo('grades')">Calificaciones</button>
+      <button>Tareas</button>
+    </div>
+    <div class="content">
+      <h2>Student: {{ studentName }}</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Materia</th>
+            <th>1er Parcial</th>
+            <th>2do Parcial</th>
+            <th>Participación</th>
+            <th>Nota Final</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let grade of grades">
+            <td>{{ grade.subject }}</td>
+            <td>{{ grade.firstTerm }}</td>
+            <td>{{ grade.secondTerm }}</td>
+            <td>{{ grade.participation }}</td>
+            <td>{{ grade.finalGrade }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

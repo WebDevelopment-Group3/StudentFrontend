@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="sidebar">
+      <button (click)="navigateTo('info')">Student Info</button>
+      <button (click)="navigateTo('grades')">Calificaciones</button>
+      <button>Tareas</button>
+    </div>
+    <div class="content">
+      <h2>Student: {{ studentName }}</h2>
+      <p><strong>Education level:</strong> {{ educationLevel }}</p>
+      <p><strong>Grade:</strong> {{ grade }}</p>
+      <p><strong>Age:</strong> {{ age }}</p>
+      <p><strong>Gender:</strong> {{ gender }}</p>
+    </div>
+  </div>

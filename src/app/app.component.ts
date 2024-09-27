@@ -9,5 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'StudentFrontend';
+  currentView: string = 'info'; // valor inicial para mostrar la información del estudiante
+
+  switchView(view: string) {
+    this.currentView = view;
+  }
 }
