@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-grades',
   templateUrl: './grades.component.html',
+  standalone: true,
   styleUrls: ['./grades.component.css']
 })
 export class GradesComponent {
