@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  ci: number | null = null;
   email: string = '';
   password: string = '';
   isLoggedIn: boolean = false;
@@ -18,11 +19,8 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   login() {
-    if (this.email === 'user@example.com' && this.password === 'password123') {
-      //this.isLoggedIn = true;
-      //localStorage.setItem('isLoggedIn', 'true');
-      
-     
+    if (this.ci === 123456 && this.password === 'password123') {
+     this.router.navigate(['/menu']);
     } else {
       alert('Incorrect credentials');
     }

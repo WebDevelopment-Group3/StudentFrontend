@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  isSidebarHidden: boolean = true;
   constructor(private router: Router) {}
 
   navigateTo(route: string) {

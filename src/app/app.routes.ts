@@ -5,14 +5,21 @@ import { AppComponent } from './app.component';
 import { StudentInfoComponent } from './components/student-info/student-info.component';
 import { GradesComponent } from './components/grades/grades.component';
 import { HomeworksComponent } from './components/homeworks/homeworks.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 export const routes: Routes = [
-{ path :'', component : AppComponent},
-{ path: 'login', component: LoginComponent },
-{ path: 'students', component: StudentInfoComponent },
-{ path: 'grades', component: GradesComponent },
-{ path: 'homeworks', component: HomeworksComponent },
-{ path: '**', redirectTo: '' }
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'menu', 
+    component: MenuComponent,  
+    children: [
+      { path: '', component: StudentInfoComponent }, 
+      { path: 'students', component: StudentInfoComponent },
+      { path: 'grades', component: GradesComponent },
+      { path: 'homeworks', component: HomeworksComponent }
+    ]
+  },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

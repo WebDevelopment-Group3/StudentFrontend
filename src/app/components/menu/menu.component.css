@@ -1,0 +1,70 @@
+.container {
+    flex-direction: column;
+    display: flex;
+    background-color: #298d5b;
+    border-radius: 20px ;
+    width: 100%;
+    
+  }
+
+ .routes{
+    margin-right: 100px;
+    padding-left: 5%;
+    width: 70%;
+    height: 70%;
+ }
+  .hidden {
+    display: none;
+  }
+  .banner {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .h2{
+    color: white;
+  }
+  .main-content {
+    display: flex;
+    flex: 1;
+  }
+  .sidebar {
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+    height: 700px;
+    
+    align-content: center;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul li button {
+    width: 100%;
+    padding: 20%;
+    color: white;
+    background-color: #444;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li button:hover {
+    background-color: #555;
+    
+  }
+  
+  .content {
+    
+    padding: 20px;
+  }
+  
