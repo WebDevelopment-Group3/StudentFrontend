@@ -1,17 +1,13 @@
 <div class="container">
   <div class="sidebar">
     <ul>
-      <li><button (click)="switchView('info')">Student Info</button></li>
-      <li><button (click)="switchView('Grades')">Grades</button></li>
-      <li><button (click)="switchView('Homework')">Homework</button></li>
+      <li><button (click)="navigateTo('students')">Student Info</button></li>
+      <li><button (click)="navigateTo('grades')">Grades</button></li>
+      <li><button (click)="navigateTo('homeworks')">Homework</button></li>
     </ul>
   </div>
 
   <div class="content">
-    <ng-container [ngSwitch]="currentView">
-      <app-student-info *ngSwitchCase="'info'"></app-student-info>
-      <app-grades *ngSwitchCase="'Grades'"></app-grades>
-      <app-homeworks *ngSwitchCase="'Homework'"></app-homeworks>
-    </ng-container>
+    <router-outlet></router-outlet>
   </div>
 </div>

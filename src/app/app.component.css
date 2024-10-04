@@ -1,7 +1,9 @@
 .container {
     display: flex;
   }
-  
+  .hidden {
+    display: none;
+  }
   .sidebar {
     width: 200px;
     background-color: #333;
