@@ -9,29 +9,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Project using Scrum</td>
-      <td>Biology</td>
-      <td>09/31/2024</td>
-      <td>Not delivered</td>
+    <!-- Itera sobre las tareas -->
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.title }}</td>
+      <td>{{ task.objective }}</td>
+      <td>{{ task.dueDate | date: 'MM/dd/yyyy' }}</td>
+      <td>{{ task.status }}</td>
     </tr>
-    <tr>
-      <td>Research Paper</td>
-      <td>History</td>
-      <td>10/05/2024</td>
-      <td>Delivered</td>
-    </tr>
-    <tr>
-      <td>Physics Lab Report</td>
-      <td>Physics</td>
-      <td>10/10/2024</td>
-      <td>Not delivered</td>
-    </tr>
-    <tr>
-      <td>Essay on Climate Change</td>
-      <td>Geography</td>
-      <td>10/12/2024</td>
-      <td>In progress</td>
+    <!-- Mostrar un mensaje si no hay tareas -->
+    <tr *ngIf="tasks.length === 0">
+      <td colspan="4">No hay tareas disponibles.</td>
     </tr>
   </tbody>
 </table>

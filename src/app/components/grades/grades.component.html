@@ -1,56 +1,26 @@
-<h2>Student: Jorge Rojas</h2>
-<table border="1">
-  <thead>
-    <tr>
-      <th>Materia</th>
-      <th>1er Parcial</th>
-      <th>2do Parcial</th>
-      <th>Participación</th>
-      <th>Nota Final</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Matemáticas</td>
-      <td>85</td>
-      <td>90</td>
-      <td>95</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <td>Historia</td>
-      <td>80</td>
-      <td>85</td>
-      <td>90</td>
-      <td>85</td>
-    </tr>
-    <tr>
-      <td>Biología</td>
-      <td>88</td>
-      <td>92</td>
-      <td>91</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <td>Química</td>
-      <td>75</td>
-      <td>80</td>
-      <td>85</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <td>Literatura</td>
-      <td>90</td>
-      <td>95</td>
-      <td>93</td>
-      <td>93</td>
-    </tr>
-    <tr>
-      <td>Física</td>
-      <td>78</td>
-      <td>82</td>
-      <td>80</td>
-      <td>80</td>
-    </tr>
-  </tbody>
-</table>
+<div class="content">
+  <h2>Student: {{ studentName }}</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Materia</th>
+        <th>1er Parcial</th>
+        <th>2do Parcial</th>
+        <th>Participación</th>
+        <th>Nota Final</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let grade of grades">
+        <td>{{ grade.subject }}</td>
+        <td>{{ grade.firstTerm }}</td>
+        <td>{{ grade.secondTerm }}</td>
+        <td>{{ grade.participation }}</td>
+        <td>{{ grade.finalGrade }}</td>
+      </tr>
+      <tr *ngIf="grades.length === 0">
+        <td colspan="5">No hay calificaciones disponibles.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

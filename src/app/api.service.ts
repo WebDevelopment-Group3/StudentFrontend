@@ -21,5 +21,8 @@ export class ApiService {
   getGrades(): Observable<any> {
     return this.http.get(this.baseUrls.grades);
   }
-
+  
+  getTasksByStudentId(studentId: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrls.tasks}/student/${studentId}`);
+  }
 }
